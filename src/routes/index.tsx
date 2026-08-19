@@ -99,18 +99,13 @@ function LoginPage() {
         </div>
       </div>
 
-      <div className="relative hidden overflow-hidden border-l border-border lg:block">
+      <div className="relative hidden items-center justify-center overflow-hidden border-l border-border p-10 lg:flex">
         <img
           src={capa.url}
           alt="Céu noturno com lua, constelações e roda do zodíaco — LimpezaAstral"
-          className="h-full w-full object-cover"
+          className="max-h-[78vh] w-auto rounded-xl border border-gold/20 object-contain shadow-[0_30px_80px_-40px_var(--gold)]"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/20 to-transparent" />
-        <div className="absolute bottom-10 left-10 right-10">
-          <p className="font-serif text-xl leading-relaxed text-foreground/90">
-            “Conecte-se com seu universo. Reencontre seu equilíbrio.”
-          </p>
-        </div>
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background to-transparent" />
       </div>
     </div>
   );
