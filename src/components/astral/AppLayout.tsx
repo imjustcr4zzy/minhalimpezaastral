@@ -12,6 +12,7 @@ const nav = [
   { to: "/meditacoes", label: "Meditações" },
   { to: "/rituais", label: "Rituais" },
   { to: "/biblioteca", label: "Biblioteca" },
+  { to: "/55-autocuidados", label: "55 Autocuidados" },
   { to: "/meu-progresso", label: "Meu Progresso" },
   { to: "/favoritos", label: "Favoritos" },
   { to: "/meu-perfil", label: "Meu Perfil" },

@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as R55AutocuidadosRouteImport } from './routes/55-autocuidados'
 import { Route as AstrologiaRouteImport } from './routes/astrologia'
 import { Route as BibliotecaRouteImport } from './routes/biblioteca'
 import { Route as ConfiguracoesRouteImport } from './routes/configuracoes'
@@ -27,6 +28,11 @@ import { Route as RituaisRouteImport } from './routes/rituais'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const R55AutocuidadosRoute = R55AutocuidadosRouteImport.update({
+  id: '/55-autocuidados',
+  path: '/55-autocuidados',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AstrologiaRoute = AstrologiaRouteImport.update({
@@ -97,6 +103,7 @@ const RituaisRoute = RituaisRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/55-autocuidados': typeof R55AutocuidadosRoute
   '/astrologia': typeof AstrologiaRoute
   '/biblioteca': typeof BibliotecaRoute
   '/configuracoes': typeof ConfiguracoesRoute
@@ -113,6 +120,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/55-autocuidados': typeof R55AutocuidadosRoute
   '/astrologia': typeof AstrologiaRoute
   '/biblioteca': typeof BibliotecaRoute
   '/configuracoes': typeof ConfiguracoesRoute
@@ -130,6 +138,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/55-autocuidados': typeof R55AutocuidadosRoute
   '/astrologia': typeof AstrologiaRoute
   '/biblioteca': typeof BibliotecaRoute
   '/configuracoes': typeof ConfiguracoesRoute
@@ -148,6 +157,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/55-autocuidados'
     | '/astrologia'
     | '/biblioteca'
     | '/configuracoes'
@@ -164,6 +174,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/55-autocuidados'
     | '/astrologia'
     | '/biblioteca'
     | '/configuracoes'
@@ -180,6 +191,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/55-autocuidados'
     | '/astrologia'
     | '/biblioteca'
     | '/configuracoes'
@@ -197,6 +209,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  R55AutocuidadosRoute: typeof R55AutocuidadosRoute
   AstrologiaRoute: typeof AstrologiaRoute
   BibliotecaRoute: typeof BibliotecaRoute
   ConfiguracoesRoute: typeof ConfiguracoesRoute
@@ -219,6 +232,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/55-autocuidados': {
+      id: '/55-autocuidados'
+      path: '/55-autocuidados'
+      fullPath: '/55-autocuidados'
+      preLoaderRoute: typeof R55AutocuidadosRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/astrologia': {
@@ -317,6 +337,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  R55AutocuidadosRoute: R55AutocuidadosRoute,
   AstrologiaRoute: AstrologiaRoute,
   BibliotecaRoute: BibliotecaRoute,
   ConfiguracoesRoute: ConfiguracoesRoute,
