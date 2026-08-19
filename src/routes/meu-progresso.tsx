@@ -26,7 +26,7 @@ function ProgressoPage() {
   const stats = [
     { label: "Práticas concluídas", value: progress.practices },
     { label: "Minutos de práticas", value: progress.minutes },
-    { label: "Rituais realizados", value: progress.rituais ?? progress.rituals },
+    { label: "Rituais realizados", value: progress.rituals },
     { label: "Conteúdos acessados", value: progress.contents },
   ];
 

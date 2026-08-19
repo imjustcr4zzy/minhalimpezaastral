@@ -10,33 +10,206 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AstrologiaRouteImport } from './routes/astrologia'
+import { Route as BibliotecaRouteImport } from './routes/biblioteca'
+import { Route as ConfiguracoesRouteImport } from './routes/configuracoes'
+import { Route as CriarContaRouteImport } from './routes/criar-conta'
+import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as FavoritosRouteImport } from './routes/favoritos'
+import { Route as LimpezaEnergeticaRouteImport } from './routes/limpeza-energetica'
+import { Route as MapaAstralRouteImport } from './routes/mapa-astral'
+import { Route as MeditacoesRouteImport } from './routes/meditacoes'
+import { Route as MeuPerfilRouteImport } from './routes/meu-perfil'
+import { Route as MeuProgressoRouteImport } from './routes/meu-progresso'
+import { Route as RecuperarSenhaRouteImport } from './routes/recuperar-senha'
+import { Route as RituaisRouteImport } from './routes/rituais'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AstrologiaRoute = AstrologiaRouteImport.update({
+  id: '/astrologia',
+  path: '/astrologia',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BibliotecaRoute = BibliotecaRouteImport.update({
+  id: '/biblioteca',
+  path: '/biblioteca',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConfiguracoesRoute = ConfiguracoesRouteImport.update({
+  id: '/configuracoes',
+  path: '/configuracoes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CriarContaRoute = CriarContaRouteImport.update({
+  id: '/criar-conta',
+  path: '/criar-conta',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardRoute = DashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FavoritosRoute = FavoritosRouteImport.update({
+  id: '/favoritos',
+  path: '/favoritos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LimpezaEnergeticaRoute = LimpezaEnergeticaRouteImport.update({
+  id: '/limpeza-energetica',
+  path: '/limpeza-energetica',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MapaAstralRoute = MapaAstralRouteImport.update({
+  id: '/mapa-astral',
+  path: '/mapa-astral',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MeditacoesRoute = MeditacoesRouteImport.update({
+  id: '/meditacoes',
+  path: '/meditacoes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MeuPerfilRoute = MeuPerfilRouteImport.update({
+  id: '/meu-perfil',
+  path: '/meu-perfil',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MeuProgressoRoute = MeuProgressoRouteImport.update({
+  id: '/meu-progresso',
+  path: '/meu-progresso',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RecuperarSenhaRoute = RecuperarSenhaRouteImport.update({
+  id: '/recuperar-senha',
+  path: '/recuperar-senha',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RituaisRoute = RituaisRouteImport.update({
+  id: '/rituais',
+  path: '/rituais',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/astrologia': typeof AstrologiaRoute
+  '/biblioteca': typeof BibliotecaRoute
+  '/configuracoes': typeof ConfiguracoesRoute
+  '/criar-conta': typeof CriarContaRoute
+  '/dashboard': typeof DashboardRoute
+  '/favoritos': typeof FavoritosRoute
+  '/limpeza-energetica': typeof LimpezaEnergeticaRoute
+  '/mapa-astral': typeof MapaAstralRoute
+  '/meditacoes': typeof MeditacoesRoute
+  '/meu-perfil': typeof MeuPerfilRoute
+  '/meu-progresso': typeof MeuProgressoRoute
+  '/recuperar-senha': typeof RecuperarSenhaRoute
+  '/rituais': typeof RituaisRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/astrologia': typeof AstrologiaRoute
+  '/biblioteca': typeof BibliotecaRoute
+  '/configuracoes': typeof ConfiguracoesRoute
+  '/criar-conta': typeof CriarContaRoute
+  '/dashboard': typeof DashboardRoute
+  '/favoritos': typeof FavoritosRoute
+  '/limpeza-energetica': typeof LimpezaEnergeticaRoute
+  '/mapa-astral': typeof MapaAstralRoute
+  '/meditacoes': typeof MeditacoesRoute
+  '/meu-perfil': typeof MeuPerfilRoute
+  '/meu-progresso': typeof MeuProgressoRoute
+  '/recuperar-senha': typeof RecuperarSenhaRoute
+  '/rituais': typeof RituaisRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/astrologia': typeof AstrologiaRoute
+  '/biblioteca': typeof BibliotecaRoute
+  '/configuracoes': typeof ConfiguracoesRoute
+  '/criar-conta': typeof CriarContaRoute
+  '/dashboard': typeof DashboardRoute
+  '/favoritos': typeof FavoritosRoute
+  '/limpeza-energetica': typeof LimpezaEnergeticaRoute
+  '/mapa-astral': typeof MapaAstralRoute
+  '/meditacoes': typeof MeditacoesRoute
+  '/meu-perfil': typeof MeuPerfilRoute
+  '/meu-progresso': typeof MeuProgressoRoute
+  '/recuperar-senha': typeof RecuperarSenhaRoute
+  '/rituais': typeof RituaisRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/astrologia'
+    | '/biblioteca'
+    | '/configuracoes'
+    | '/criar-conta'
+    | '/dashboard'
+    | '/favoritos'
+    | '/limpeza-energetica'
+    | '/mapa-astral'
+    | '/meditacoes'
+    | '/meu-perfil'
+    | '/meu-progresso'
+    | '/recuperar-senha'
+    | '/rituais'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/astrologia'
+    | '/biblioteca'
+    | '/configuracoes'
+    | '/criar-conta'
+    | '/dashboard'
+    | '/favoritos'
+    | '/limpeza-energetica'
+    | '/mapa-astral'
+    | '/meditacoes'
+    | '/meu-perfil'
+    | '/meu-progresso'
+    | '/recuperar-senha'
+    | '/rituais'
+  id:
+    | '__root__'
+    | '/'
+    | '/astrologia'
+    | '/biblioteca'
+    | '/configuracoes'
+    | '/criar-conta'
+    | '/dashboard'
+    | '/favoritos'
+    | '/limpeza-energetica'
+    | '/mapa-astral'
+    | '/meditacoes'
+    | '/meu-perfil'
+    | '/meu-progresso'
+    | '/recuperar-senha'
+    | '/rituais'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AstrologiaRoute: typeof AstrologiaRoute
+  BibliotecaRoute: typeof BibliotecaRoute
+  ConfiguracoesRoute: typeof ConfiguracoesRoute
+  CriarContaRoute: typeof CriarContaRoute
+  DashboardRoute: typeof DashboardRoute
+  FavoritosRoute: typeof FavoritosRoute
+  LimpezaEnergeticaRoute: typeof LimpezaEnergeticaRoute
+  MapaAstralRoute: typeof MapaAstralRoute
+  MeditacoesRoute: typeof MeditacoesRoute
+  MeuPerfilRoute: typeof MeuPerfilRoute
+  MeuProgressoRoute: typeof MeuProgressoRoute
+  RecuperarSenhaRoute: typeof RecuperarSenhaRoute
+  RituaisRoute: typeof RituaisRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +221,115 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/astrologia': {
+      id: '/astrologia'
+      path: '/astrologia'
+      fullPath: '/astrologia'
+      preLoaderRoute: typeof AstrologiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/biblioteca': {
+      id: '/biblioteca'
+      path: '/biblioteca'
+      fullPath: '/biblioteca'
+      preLoaderRoute: typeof BibliotecaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/configuracoes': {
+      id: '/configuracoes'
+      path: '/configuracoes'
+      fullPath: '/configuracoes'
+      preLoaderRoute: typeof ConfiguracoesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/criar-conta': {
+      id: '/criar-conta'
+      path: '/criar-conta'
+      fullPath: '/criar-conta'
+      preLoaderRoute: typeof CriarContaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard': {
+      id: '/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/favoritos': {
+      id: '/favoritos'
+      path: '/favoritos'
+      fullPath: '/favoritos'
+      preLoaderRoute: typeof FavoritosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/limpeza-energetica': {
+      id: '/limpeza-energetica'
+      path: '/limpeza-energetica'
+      fullPath: '/limpeza-energetica'
+      preLoaderRoute: typeof LimpezaEnergeticaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mapa-astral': {
+      id: '/mapa-astral'
+      path: '/mapa-astral'
+      fullPath: '/mapa-astral'
+      preLoaderRoute: typeof MapaAstralRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/meditacoes': {
+      id: '/meditacoes'
+      path: '/meditacoes'
+      fullPath: '/meditacoes'
+      preLoaderRoute: typeof MeditacoesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/meu-perfil': {
+      id: '/meu-perfil'
+      path: '/meu-perfil'
+      fullPath: '/meu-perfil'
+      preLoaderRoute: typeof MeuPerfilRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/meu-progresso': {
+      id: '/meu-progresso'
+      path: '/meu-progresso'
+      fullPath: '/meu-progresso'
+      preLoaderRoute: typeof MeuProgressoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/recuperar-senha': {
+      id: '/recuperar-senha'
+      path: '/recuperar-senha'
+      fullPath: '/recuperar-senha'
+      preLoaderRoute: typeof RecuperarSenhaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rituais': {
+      id: '/rituais'
+      path: '/rituais'
+      fullPath: '/rituais'
+      preLoaderRoute: typeof RituaisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AstrologiaRoute: AstrologiaRoute,
+  BibliotecaRoute: BibliotecaRoute,
+  ConfiguracoesRoute: ConfiguracoesRoute,
+  CriarContaRoute: CriarContaRoute,
+  DashboardRoute: DashboardRoute,
+  FavoritosRoute: FavoritosRoute,
+  LimpezaEnergeticaRoute: LimpezaEnergeticaRoute,
+  MapaAstralRoute: MapaAstralRoute,
+  MeditacoesRoute: MeditacoesRoute,
+  MeuPerfilRoute: MeuPerfilRoute,
+  MeuProgressoRoute: MeuProgressoRoute,
+  RecuperarSenhaRoute: RecuperarSenhaRoute,
+  RituaisRoute: RituaisRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
