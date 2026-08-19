@@ -36,7 +36,7 @@ function DashboardPage() {
         <img
           src={capa.url}
           alt="Lua, constelações e roda do zodíaco em céu noturno dourado"
-          className="absolute inset-0 h-full w-full object-cover opacity-40"
+          className="absolute inset-0 h-full w-full object-cover object-right opacity-25"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/40" />
         <div className="relative grid grid-cols-[minmax(0,1fr)_auto] items-center gap-6 p-7 sm:p-10">
