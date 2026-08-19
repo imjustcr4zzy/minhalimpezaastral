@@ -99,8 +99,8 @@ function Wheel() {
           [214, 330],
           [18, 214],
         ].map(([a, b], i) => {
-          const [x1, y1] = point(a, r - 88);
-          const [x2, y2] = point(b, r - 88);
+          const [x1, y1] = point(a as number, r - 88);
+          const [x2, y2] = point(b as number, r - 88);
           return <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} />;
         })}
       </g>
